@@ -1,10 +1,7 @@
 abstract class FiguraGeometrica {
     public abstract double calcularArea();
     public abstract double calcularPerimetro();
-    public double calcularPotencia(double base, int exponente) {
-        return Math.pow(base, exponente);
     }
-}
 
 class Circulo extends FiguraGeometrica {
     private final double radio;
@@ -15,7 +12,7 @@ class Circulo extends FiguraGeometrica {
 
     @Override
     public double calcularArea() {
-        return Math.PI * Math.pow(radio, 2);
+        return Math.PI * radio * radio;
     }
 
     @Override
